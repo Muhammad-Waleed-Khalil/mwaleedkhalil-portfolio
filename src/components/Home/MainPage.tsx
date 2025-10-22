@@ -1,0 +1,50 @@
+"use client";
+
+import React, { useState, useEffect } from "react";
+import PreLoading from "./PreLoading";
+import Hero from "./Hero";
+import Services from "./Services";
+import Works from "./Works";
+import About from "./About";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
+import SkillsEducation from "./SkillsEducation";
+import FooterTransition from "./FooterTransition";
+
+function MainPage() {
+  const [count, setCount] = useState(5);
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      setCount((prev) => {
+        if (prev === 0) {
+          clearInterval(timer);
+          return 0;
+        } else return prev - 1;
+      });
+    }, 1000);
+  }, []);
+
+  return (
+    <>
+      {count > 0 ? (
+        <PreLoading count={count} />
+      ) : (
+        <div className="px-[6vw]">
+          <Navbar />
+          <main>
+            <Hero />
+            <About />
+            <Works />
+            <Services />
+            <SkillsEducation />
+            <FooterTransition />
+          </main>
+          <Footer />
+        </div>
+      )}
+    </>
+  );
+}
+
+export default MainPage;

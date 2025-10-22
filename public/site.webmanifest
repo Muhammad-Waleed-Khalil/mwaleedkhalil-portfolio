@@ -1,0 +1,50 @@
+{
+  "name": "Muhammad Waleed Khalil - Full-Stack Developer",
+  "short_name": "MW Portfolio",
+  "description": "Full-Stack Developer & AI Integration Specialist specializing in Next.js, Laravel, MERN stack, and React Native. Building scalable SaaS, e-commerce, and mobile solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F5E7D3",
+  "theme_color": "#AC4800",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "portfolio",
+    "technology",
+    "developer",
+    "software",
+    "web development"
+  ],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

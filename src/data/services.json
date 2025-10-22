@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Full-Stack Web Development",
+    "description": "End-to-end application development using modern stacks including MERN, Laravel, and Next.js. I build scalable, performant web applications with clean architecture, responsive design, and optimal user experience. From database design to frontend implementation, I handle every aspect of web development with expertise in both SQL and NoSQL databases, RESTful APIs, and modern JavaScript frameworks.",
+    "technologies": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Laravel",
+      "Express",
+      "MongoDB",
+      "MySQL",
+      "PostgreSQL",
+      "TypeScript",
+      "PHP",
+      "Vue.js",
+      "TailwindCSS",
+      "REST APIs",
+      "GraphQL"
+    ],
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80",
+    "icon": "code"
+  },
+  {
+    "id": 2,
+    "title": "AI Integration & Smart Solutions",
+    "description": "Embedding cutting-edge AI capabilities into web platforms to create smarter, more engaging user experiences. I specialize in integrating Natural Language Processing (NLP) for intelligent chatbots and text analysis, Computer Vision for image recognition and processing, and custom AI modules using TensorFlow.js and OpenAI APIs. Transform your application with predictive analytics, automated workflows, and intelligent decision-making systems.",
+    "technologies": [
+      "OpenAI API",
+      "TensorFlow.js",
+      "NLP Modules",
+      "Computer Vision",
+      "Machine Learning",
+      "Python",
+      "Sentiment Analysis",
+      "ChatGPT Integration",
+      "AI Chatbots",
+      "Predictive Analytics"
+    ],
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
+    "icon": "brain"
+  },
+  {
+    "id": 3,
+    "title": "Mobile App Development",
+    "description": "Building high-performance cross-platform mobile applications using React Native. I create apps that work seamlessly on both iOS and Android with native-like performance, smooth animations, and intuitive interfaces. Expertise in offline-first architecture, real-time data synchronization, push notifications, and app store deployment. From concept to deployment, I deliver mobile solutions that users love.",
+    "technologies": [
+      "React Native",
+      "TypeScript",
+      "Expo",
+      "Redux",
+      "Firebase",
+      "Native Modules",
+      "iOS Development",
+      "Android Development",
+      "Push Notifications",
+      "Offline Storage"
+    ],
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&q=80",
+    "icon": "mobile"
+  },
+  {
+    "id": 4,
+    "title": "DevOps & Automation",
+    "description": "Streamlining development workflows with modern DevOps practices and automation. I implement CI/CD pipelines for faster, more reliable deployments, containerize applications with Docker for consistency across environments, and set up monitoring and logging systems for production reliability. Expertise in cloud platforms (AWS, Google Cloud), automated testing, and infrastructure as code to reduce deployment time and minimize errors.",
+    "technologies": [
+      "Docker",
+      "CI/CD Pipelines",
+      "Git",
+      "GitHub Actions",
+      "AWS",
+      "Google Cloud",
+      "Nginx",
+      "Linux",
+      "Jenkins",
+      "Automated Testing",
+      "Monitoring Tools"
+    ],
+    "image": "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?w=800&q=80",
+    "icon": "server"
+  }
+]
