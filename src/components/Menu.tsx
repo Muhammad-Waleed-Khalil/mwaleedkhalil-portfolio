@@ -4,6 +4,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { spectralBridgeRegular } from "@/fonts/font";
 import { motion, AnimatePresence } from "framer-motion";
+import { useScrollToSection } from "@/utils/useScrollToSection";
 
 type Open = {
   readonly menuOpen: boolean;
@@ -11,6 +12,8 @@ type Open = {
 };
 
 function Menu({ menuOpen, setMenuOpen }: Open) {
+  const { handleHashNavigation } = useScrollToSection();
+
   const navLinks = [
     {
       route: "/",
@@ -138,7 +141,13 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
                         ) : null}
                       </div>
                       {/* THE NAVIGATION TEXTS */}
-                      <Link href={link.route}>
+                      <Link
+                        href={link.route}
+                        onClick={(e) => {
+                          setMenuOpen(false);
+                          handleHashNavigation(e, link.route);
+                        }}
+                      >
                         <motion.li
                           initial={{ visibility: "hidden" }}
                           animate={{
@@ -151,10 +160,9 @@ function Menu({ menuOpen, setMenuOpen }: Open) {
                           exit={{ visibility: "hidden" }}
                           className={`${spectralBridgeRegular.className} relative px-3 text-[16vw] overflow-hidden sm:text-[13vw]  md:text-[10vw]
                     lg:text-[8vw] xl:text-[6vw] leading-[1] uppercase text-lightText dark:text-darkText text-center
-                    hover:after:scale-x-100 after:duration-700 after:origin-left after:absolute after:scale-x-0 
-                    after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:top-1/2 after:left-1/2 after:content-lightSlash 
+                    hover:after:scale-x-100 after:duration-700 after:origin-left after:absolute after:scale-x-0
+                    after:transform after:translate-x-[-50%] after:translate-y-[-50%] after:top-1/2 after:left-1/2 after:content-lightSlash
                     dark:after:content-darkSlash after:scale-y-50 after:  `}
-                          onClick={() => setMenuOpen(false)}
                         >
                           <motion.span
                             initial={{ y: "100%" }}
