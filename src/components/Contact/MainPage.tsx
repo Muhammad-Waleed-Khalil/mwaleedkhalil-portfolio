@@ -1,12 +1,27 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { spectralBridgeRegular } from "@/fonts/font";
 import { motion, easeInOut } from "framer-motion";
 import Paragraph from "../Paragraph";
 import Loading from "../Loading";
+import { Turnstile } from "@marsidev/react-turnstile";
+import { useTheme } from "next-themes";
+
+// Cloudflare Turnstile Configuration
+const TURNSTILE_SITE_KEY = "0x4AAAAAAB8CGDLMi_kzY9-4";
+const TURNSTILE_SECRET_KEY = "0x4AAAAAAB8CGBARj-wDiPuxuq_UsfUvT9I";
 
 function MainPage() {
   const [loading, setLoading] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState<string>("");
+  const [verified, setVerified] = useState(false);
+  const turnstileRef = useRef<any>(null);
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const EASING = [0.83, 0, 0.17, 1];
 
@@ -53,8 +68,14 @@ function MainPage() {
   };
 
   function handleSubmit(e: React.FormEvent) {
+    if (!turnstileToken || !verified) {
+      e.preventDefault();
+      alert("Please complete the security verification first.");
+      return;
+    }
+
     setLoading(true);
-    // FormSubmit will handle the rest
+    // Form will be submitted normally to FormSubmit
   }
 
   return (
@@ -113,13 +134,19 @@ function MainPage() {
                 }
               />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="true" />
+              <input type="hidden" name="_captcha" value="false" />
               <input
                 type="text"
                 name="_honey"
                 style={{ display: "none" }}
                 tabIndex={-1}
                 autoComplete="off"
+              />
+              {/* Cloudflare Turnstile Token */}
+              <input
+                type="hidden"
+                name="cf-turnstile-response"
+                value={turnstileToken}
               />
 
               <div className="flex flex-col xs:flex-row gap-6">
@@ -218,14 +245,51 @@ function MainPage() {
                 </div>
               </div>
 
-              <div className="mt-8">
+              {/* Cloudflare Turnstile */}
+              <div className="mt-6 flex justify-center">
+                <motion.div
+                  variants={appear}
+                  initial="initial"
+                  animate="animate"
+                  className="flex flex-col items-center"
+                >
+                  <Turnstile
+                    ref={turnstileRef}
+                    siteKey={TURNSTILE_SITE_KEY}
+                    onSuccess={(token) => {
+                      setTurnstileToken(token);
+                      setVerified(true);
+                    }}
+                    onError={() => {
+                      setTurnstileToken("");
+                      setVerified(false);
+                      alert("Security verification failed. Please try again.");
+                    }}
+                    onExpire={() => {
+                      setTurnstileToken("");
+                      setVerified(false);
+                    }}
+                    theme={
+                      mounted ? (theme === "dark" ? "dark" : "light") : "light"
+                    }
+                    size="normal"
+                  />
+                  {verified && (
+                    <p className="text-green-600 dark:text-green-400 text-xs mt-2">
+                      ✓ Verified
+                    </p>
+                  )}
+                </motion.div>
+              </div>
+
+              <div className="mt-6">
                 <motion.button
                   variants={appear}
                   initial="initial"
                   animate="animate"
                   type="submit"
-                  disabled={loading}
-                  className="group hover:bg-lightText hover:text-lightBg dark:hover:bg-darkText dark:hover:text-darkBg duration-300 text-[16px] 2xl:text-[26px] w-full sm:w-[45%] py-2 border-[1px] border-lightText dark:border-darkText rounded-full outline-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  disabled={loading || !verified}
+                  className="group hover:bg-lightText hover:text-lightBg dark:hover:bg-darkText dark:hover:text-darkBg duration-300 text-[16px] 2xl:text-[26px] w-full sm:w-[45%] py-3 border-[1px] border-lightText dark:border-darkText rounded-full outline-none disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {loading ? (
                     <Loading classNameSize="w-7 h-7" />
@@ -243,7 +307,8 @@ function MainPage() {
               >
                 <p className="text-[12px] opacity-60">
                   * Required fields. Your information is secure and will only be
-                  used to respond to your inquiry.
+                  used to respond to your inquiry. Protected by Cloudflare
+                  Turnstile.
                 </p>
               </motion.div>
             </form>
