@@ -14,6 +14,7 @@ function MainPage() {
   const [loading, setLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string>("");
   const [verified, setVerified] = useState(false);
+  const [showVerificationError, setShowVerificationError] = useState(false);
   const turnstileRef = useRef<any>(null);
 
   const EASING = [0.83, 0, 0.17, 1];
@@ -63,7 +64,8 @@ function MainPage() {
   function handleSubmit(e: React.FormEvent) {
     if (!turnstileToken || !verified) {
       e.preventDefault();
-      alert("Please complete the security verification first.");
+      setShowVerificationError(true);
+      setTimeout(() => setShowVerificationError(false), 5000);
       return;
     }
 
@@ -261,22 +263,40 @@ function MainPage() {
                     onError={() => {
                       setTurnstileToken("");
                       setVerified(false);
-                      alert("Security verification failed. Please try again.");
+                      setShowVerificationError(true);
+                      setTimeout(() => setShowVerificationError(false), 5000);
                     }}
                     onExpire={() => {
                       setTurnstileToken("");
                       setVerified(false);
                     }}
                   />
-                  {verified && (
-                    <p className="text-green-600 dark:text-green-400 text-xs mt-2">
-                      ✓ Verified
-                    </p>
-                  )}
                 </motion.div>
               </div>
 
-              <div className="mt-6">
+              {/* Verification Status Messages */}
+              <div className="mt-4 flex justify-center">
+                {verified && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-green-600 dark:text-green-400 text-sm"
+                  >
+                    ✓ Verified
+                  </motion.p>
+                )}
+                {showVerificationError && (
+                  <motion.p
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-red-600 dark:text-red-400 text-sm text-center"
+                  >
+                    ⚠ Please complete the security verification first
+                  </motion.p>
+                )}
+              </div>
+
+              <div className="mt-6 flex justify-center">
                 <motion.button
                   variants={appear}
                   initial="initial"
