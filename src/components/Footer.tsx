@@ -174,7 +174,7 @@ function Footer() {
         >
           <div>
             <p className="text-[14px] text-lightText60 dark:text-darkText60">
-              Full-Stack Development
+              Full-Stack Developer
             </p>
             <p className="text-[14px] text-lightText dark:text-darkText">
               Muhammad Waleed Khalil
