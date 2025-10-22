@@ -1,6 +1,7 @@
 import MainPage from "@/components/Contact/MainPage";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import SuccessMessage from "@/components/Contact/SuccessMessage";
 import React from "react";
 import { Metadata } from "next";
 import {
@@ -87,6 +88,7 @@ function Contact() {
         }}
       />
       <div className="px-[6vw]">
+        <SuccessMessage />
         <Navbar />
         <main>
           <MainPage />
