@@ -59,8 +59,9 @@ function SuccessMessage() {
               Message Sent Successfully! ✓
             </h3>
             <p className="text-green-700 dark:text-green-200 text-sm">
-              Thank you for reaching out! I've received your message and will
-              get back to you as soon as possible, typically within 24-48 hours.
+              Thank you for reaching out! I&apos;ve received your message and
+              will get back to you as soon as possible, typically within 24-48
+              hours.
             </p>
           </div>
           <button
