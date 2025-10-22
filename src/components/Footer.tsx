@@ -202,7 +202,9 @@ function Footer() {
         </motion.div>
       </div>
       <motion.div className="mt-3 flex justify-center md:justify-start">
-        <p className="text-[12px]">All Rights Reserved &copy; 2024</p>
+        <p className="text-[12px]">
+          All Rights Reserved &copy; {new Date().getFullYear()}
+        </p>
       </motion.div>
     </footer>
   );

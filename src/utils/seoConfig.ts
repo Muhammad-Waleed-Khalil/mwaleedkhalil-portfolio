@@ -12,115 +12,118 @@ export interface SEOConfig {
   canonical?: string;
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://waleedkhalil.vercel.app';
-const SITE_NAME = 'Muhammad Waleed Khalil';
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://waleedkhalil.vercel.app";
+const SITE_NAME = "Muhammad Waleed Khalil";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-image.jpg`;
 
 // Common keywords used across the site
 const COMMON_KEYWORDS = [
-  'full-stack developer',
-  'Next.js developer',
-  'React developer',
-  'Laravel developer',
-  'MERN stack developer',
-  'AI integration specialist',
-  'software engineer Pakistan',
-  'web developer Islamabad',
-  'React Native developer',
-  'Node.js developer',
-  'TypeScript developer',
-  'PHP developer',
-  'JavaScript developer',
-  'freelance developer Pakistan',
+  "full-stack developer",
+  "Next.js developer",
+  "React developer",
+  "Laravel developer",
+  "MERN stack developer",
+  "AI integration specialist",
+  "software engineer Pakistan",
+  "web developer Islamabad",
+  "React Native developer",
+  "Node.js developer",
+  "TypeScript developer",
+  "PHP developer",
+  "JavaScript developer",
+  "freelance developer Pakistan",
 ];
 
 // Page-specific SEO configurations
 export const PAGE_SEO: Record<string, SEOConfig> = {
   home: {
-    title: 'Muhammad Waleed Khalil | Full-Stack Developer & AI Integration Specialist',
+    title:
+      "Muhammad Waleed Khalil | Full-Stack Developer & AI Integration Specialist",
     description:
-      'Full-Stack Developer with 4+ years experience in Next.js, React, Laravel, and AI integration. Building scalable SaaS, e-commerce, and mobile solutions in Islamabad, Pakistan.',
+      "Full-Stack Developer with 4+ years experience in Next.js, React, Laravel, and AI integration. Building scalable SaaS, e-commerce, and mobile solutions in Islamabad, Pakistan.",
     keywords: [
       ...COMMON_KEYWORDS,
-      'portfolio',
-      'projects',
-      'web applications',
-      'mobile apps',
-      'AI systems',
-    ].join(', '),
-    ogTitle: 'Muhammad Waleed Khalil - Full-Stack Developer & AI Specialist',
+      "portfolio",
+      "projects",
+      "web applications",
+      "mobile apps",
+      "AI systems",
+    ].join(", "),
+    ogTitle: "Muhammad Waleed Khalil - Full-Stack Developer & AI Specialist",
     ogDescription:
-      'Building scalable, AI-enhanced web and mobile applications with Laravel, Next.js, React, and MERN stack. Available for freelance and full-time opportunities.',
+      "Building scalable, AI-enhanced web and mobile applications with Laravel, Next.js, React, and MERN stack. Available for freelance and full-time opportunities.",
     ogImage: DEFAULT_OG_IMAGE,
-    twitterCard: 'summary_large_image',
+    twitterCard: "summary_large_image",
     canonical: SITE_URL,
   },
 
   about: {
-    title: 'About Muhammad Waleed Khalil - Full-Stack Developer from Islamabad',
+    title: "About Muhammad Waleed Khalil - Full-Stack Developer from Islamabad",
     description:
-      'Learn about Muhammad Waleed Khalil, a full-stack developer specializing in Laravel, MERN, Next.js, and AI integration with 4+ years of experience building enterprise solutions.',
+      "Learn about Muhammad Waleed Khalil, a full-stack developer specializing in Laravel, MERN, Next.js, and AI integration with 4+ years of experience building enterprise solutions.",
     keywords: [
       ...COMMON_KEYWORDS,
-      'about',
-      'biography',
-      'experience',
-      'education',
-      'skills',
-      'certifications',
-      'BS Computer Science',
-    ].join(', '),
-    ogTitle: 'About Muhammad Waleed Khalil - Full-Stack Developer',
+      "about",
+      "biography",
+      "experience",
+      "education",
+      "skills",
+      "certifications",
+      "BS Computer Science",
+    ].join(", "),
+    ogTitle: "About Muhammad Waleed Khalil - Full-Stack Developer",
     ogDescription:
-      '4+ years of experience delivering SaaS, e-commerce, and government platforms. Specializing in Laravel, MERN, Next.js, React Native, and AI integration.',
+      "4+ years of experience delivering SaaS, e-commerce, and government platforms. Specializing in Laravel, MERN, Next.js, React Native, and AI integration.",
     ogImage: DEFAULT_OG_IMAGE,
-    twitterCard: 'summary_large_image',
+    twitterCard: "summary_large_image",
     canonical: `${SITE_URL}/about`,
   },
 
   works: {
-    title: 'Portfolio Projects - SaaS, AI Systems, Web & Mobile Apps | Muhammad Waleed Khalil',
+    title:
+      "Portfolio Projects - SaaS, AI Systems, Web & Mobile Apps | Muhammad Waleed Khalil",
     description:
-      'Explore portfolio projects including MOC-PULSE AI Interview System, PMRU Government Dashboard, IntelliDelve SaaS, and e-commerce platforms built with Next.js, Laravel, and React.',
+      "Explore portfolio projects including MOC-PULSE AI Interview System, Performance Management and Reforms Unit (PMRU) Dashboard, IntelliDelve SaaS, and e-commerce platforms built with Next.js, Laravel, and React.",
     keywords: [
       ...COMMON_KEYWORDS,
-      'portfolio projects',
-      'web applications',
-      'mobile apps',
-      'SaaS platforms',
-      'AI systems',
-      'e-commerce solutions',
-      'government platforms',
-      'MOC-PULSE',
-      'IntelliDelve',
-      'React Native apps',
-    ].join(', '),
-    ogTitle: 'Portfolio Projects - Muhammad Waleed Khalil',
+      "portfolio projects",
+      "web applications",
+      "mobile apps",
+      "SaaS platforms",
+      "AI systems",
+      "e-commerce solutions",
+      "government platforms",
+      "MOC-PULSE",
+      "IntelliDelve",
+      "React Native apps",
+    ].join(", "),
+    ogTitle: "Portfolio Projects - Muhammad Waleed Khalil",
     ogDescription:
-      'Featured projects: AI Interview System (35% performance boost), Government Dashboard (90% faster), SaaS Platform (5K+ users), E-commerce Suite (40% faster load).',
+      "Featured projects: AI Interview System (35% performance boost), PMRU Dashboard (90% faster), SaaS Platform (5K+ users), E-commerce Suite (40% faster load).",
     ogImage: `${SITE_URL}/images/projects-og.jpg`,
-    twitterCard: 'summary_large_image',
+    twitterCard: "summary_large_image",
     canonical: `${SITE_URL}/works`,
   },
 
   contact: {
-    title: 'Contact Muhammad Waleed Khalil - Freelance Full-Stack Developer',
+    title: "Contact Muhammad Waleed Khalil - Freelance Full-Stack Developer",
     description:
-      'Get in touch with Muhammad Waleed Khalil for full-stack development, AI integration, mobile app development, and DevOps services. Available for freelance and full-time work.',
+      "Get in touch with Muhammad Waleed Khalil for full-stack development, AI integration, mobile app development, and DevOps services. Available for freelance and full-time work.",
     keywords: [
       ...COMMON_KEYWORDS,
-      'contact',
-      'hire developer',
-      'freelance developer',
-      'consultation',
-      'software development services',
-      'web development services Pakistan',
-    ].join(', '),
-    ogTitle: 'Contact Muhammad Waleed Khalil - Available for Projects',
+      "contact",
+      "hire developer",
+      "freelance developer",
+      "consultation",
+      "software development services",
+      "web development services Pakistan",
+    ].join(", "),
+    ogTitle: "Contact Muhammad Waleed Khalil - Available for Projects",
     ogDescription:
-      'Available for freelance and full-time opportunities. Let\'s build something impactful together. Email: mwaleedkhalil@gmail.com',
+      "Available for freelance and full-time opportunities. Let's build something impactful together. Email: mwaleedkhalil@gmail.com",
     ogImage: DEFAULT_OG_IMAGE,
-    twitterCard: 'summary',
+    twitterCard: "summary",
     canonical: `${SITE_URL}/contact`,
   },
 };
@@ -150,8 +153,8 @@ export const getOpenGraphTags = (pageKey: string) => {
         alt: config.ogTitle || config.title,
       },
     ],
-    locale: 'en_US',
-    type: 'website',
+    locale: "en_US",
+    type: "website",
   };
 };
 
@@ -159,21 +162,21 @@ export const getOpenGraphTags = (pageKey: string) => {
 export const getTwitterTags = (pageKey: string) => {
   const config = PAGE_SEO[pageKey] || PAGE_SEO.home;
   return {
-    card: config.twitterCard || 'summary_large_image',
+    card: config.twitterCard || "summary_large_image",
     title: config.ogTitle || config.title,
     description: config.ogDescription || config.description,
     images: [config.ogImage || DEFAULT_OG_IMAGE],
-    creator: '@mwaleedkhalil',
-    site: '@mwaleedkhalil',
+    creator: "@mwaleedkhalil",
+    site: "@mwaleedkhalil",
   };
 };
 
 // Get robots meta tag
 export const getRobotsTags = (index = true, follow = true) => {
   const directives = [];
-  directives.push(index ? 'index' : 'noindex');
-  directives.push(follow ? 'follow' : 'nofollow');
-  return directives.join(', ');
+  directives.push(index ? "index" : "noindex");
+  directives.push(follow ? "follow" : "nofollow");
+  return directives.join(", ");
 };
 
 // Generate canonical URL

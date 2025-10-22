@@ -21,9 +21,9 @@
   },
   {
     "id": 2,
-    "title": "PMRU Government Dashboard",
+    "title": "Performance Management and Reforms Unit (PMRU) Dashboard",
     "description": "Comprehensive workflow system for housing allocation and citizen queries. Achieved 90% faster processing with integrated AI chatbot for citizen support.",
-    "longDescription": "The Prime Minister's Residency Unit (PMRU) Government Dashboard is a sophisticated web application designed to streamline housing allocation processes and manage citizen queries efficiently. Built with Laravel and Vue.js, the system features an intuitive admin panel for managing applications, automated workflow routing, and real-time status tracking. The integrated AI chatbot handles common citizen queries, reducing manual workload by 60% and improving response times significantly. The dashboard has processed over 50,000 applications since deployment.",
+    "longDescription": "The Performance Management and Reforms Unit (PMRU) Government Dashboard is a sophisticated web application designed to streamline housing allocation processes and manage citizen queries efficiently. Built with Laravel and Vue.js, the system features an intuitive admin panel for managing applications, automated workflow routing, and real-time status tracking. The integrated AI chatbot handles common citizen queries, reducing manual workload by 60% and improving response times significantly. The dashboard has processed over 50,000 applications since deployment.",
     "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
     "technologies": [
       "Laravel",
