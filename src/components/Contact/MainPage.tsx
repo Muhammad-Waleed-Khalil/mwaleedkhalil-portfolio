@@ -1,11 +1,10 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { spectralBridgeRegular } from "@/fonts/font";
 import { motion, easeInOut } from "framer-motion";
 import Paragraph from "../Paragraph";
 import Loading from "../Loading";
 import { Turnstile } from "@marsidev/react-turnstile";
-import { useTheme } from "next-themes";
 
 // Cloudflare Turnstile Configuration
 const TURNSTILE_SITE_KEY = "0x4AAAAAAB8CGDLMi_kzY9-4";
@@ -16,12 +15,6 @@ function MainPage() {
   const [turnstileToken, setTurnstileToken] = useState<string>("");
   const [verified, setVerified] = useState(false);
   const turnstileRef = useRef<any>(null);
-  const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const EASING = [0.83, 0, 0.17, 1];
 
@@ -269,10 +262,6 @@ function MainPage() {
                       setTurnstileToken("");
                       setVerified(false);
                     }}
-                    theme={
-                      mounted ? (theme === "dark" ? "dark" : "light") : "light"
-                    }
-                    size="normal"
                   />
                   {verified && (
                     <p className="text-green-600 dark:text-green-400 text-xs mt-2">
