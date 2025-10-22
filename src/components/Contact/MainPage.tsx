@@ -129,6 +129,11 @@ function MainPage() {
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
               <input
+                type="hidden"
+                name="_exclude"
+                value="cf-turnstile-response"
+              />
+              <input
                 type="text"
                 name="_honey"
                 style={{ display: "none" }}
