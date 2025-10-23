@@ -1,36 +1,14 @@
-# robots.txt for Muhammad Waleed Khalil Portfolio
-# https://waleedkhalil.vercel.app
-
+# *
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_next/
-Disallow: /admin/
 
-# Sitemap location
-Sitemap: https://waleedkhalil.vercel.app/sitemap.xml
-
-# Crawl-delay for all bots
-Crawl-delay: 0
-
-# Google bot specific
-User-agent: Googlebot
-Allow: /
+# *
+User-agent: *
 Disallow: /api/
 Disallow: /_next/
 
-# Bing bot specific
-User-agent: Bingbot
-Allow: /
-Disallow: /api/
-Disallow: /_next/
+# Host
+Host: https://mwaleedkhalil.vercel.app
 
-# Block bad bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: SemrushBot
-Disallow: /
+# Sitemaps
+Sitemap: https://mwaleedkhalil.vercel.app/sitemap.xml
