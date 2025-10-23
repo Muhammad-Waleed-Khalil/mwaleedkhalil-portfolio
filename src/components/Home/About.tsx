@@ -54,9 +54,9 @@ function About() {
   // ideas span
   const topline2 = "intelligent solutions that deliver";
   // deliver span
-  const bottomline1 = "measurable impact through modern";
+  const bottomline1 = "measurable impact through";
   // finish span
-  const bottomline2 = "tech stacks and AI integration.";
+  const bottomline2 = "modern tech stacks and AI integration.";
 
   const appear = {
     initial: {
@@ -76,12 +76,12 @@ function About() {
     <section className="py-[15vh]">
       <div>
         <div className="">
-          <Header3 phrase={topline1} className="pr-[15vw]" />
-          <Header3 phrase={topline2} className="pr-[15vw]" />
+          <Header3 phrase={topline1} />
+          <Header3 phrase={topline2} />
         </div>
         <div className="">
-          <Header3 phrase={bottomline1} className="pl-[15vw]" />
-          <Header3 phrase={bottomline2} className="pl-[15vw]" />
+          <Header3 phrase={bottomline1} />
+          <Header3 phrase={bottomline2} />
         </div>
       </div>
       <div className="mt-10 flex flex-col-reverse md:flex-row md:items-center gap-y-4 md:gap-y-0">
@@ -112,19 +112,18 @@ function About() {
         </div>
       </div>
       <motion.div
-        className="flex mt-8"
+        className="mt-8"
         variants={appear}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <div className="xs:flex-[1] hidden xs:block"></div>
-        <div className="xs:flex-[2.5] md:flex-[1.2] flex flex-col sm:flex-row gap-8">
-          <div className="flex-1">
-            <Paragraph text="I'm a Full-Stack Developer with 4+ years of experience delivering SaaS, e-commerce, and government platforms. I specialize in Laravel, MERN, Next.js, and React Native — combining scalability, security, and automation. My projects range from AI-powered interview systems to government dashboards processing thousands of applications daily." />
-          </div>
-          <div className="flex-1">
-            <div className="">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="space-y-4">
+              <Paragraph text="I'm a Full-Stack Developer with 4+ years of experience delivering SaaS, e-commerce, and government platforms. I specialize in Laravel, MERN, Next.js, and React Native — combining scalability, security, and automation. My projects range from AI-powered interview systems to government dashboards processing thousands of applications daily." />
+            </div>
+            <div className="space-y-4">
               <Paragraph text="My focus is on integrating AI modules (NLP & Computer Vision) to make products smarter, faster, and more engaging. I've helped improve interview performance by 35%, accelerated government workflows by 90%, and boosted user engagement by 30% through intelligent automation. I believe in writing clean, maintainable code that scales." />
             </div>
           </div>

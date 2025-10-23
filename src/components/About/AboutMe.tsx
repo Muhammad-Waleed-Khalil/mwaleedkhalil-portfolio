@@ -16,7 +16,7 @@ function AboutMe() {
       <div className="flex flex-col md:flex-row gap-x-[8vw] gap-y-6">
         <p className={`text-[14px] md:text-[18px]`}>About me</p>
         <div className="flex-1">
-          <Header3 phrase={line1} className="indent-[10%]" />
+          <Header3 phrase={line1} />
           <Header3 phrase={line2} />
           <Header3 phrase={line3} />
           <Header3 phrase={line4} />

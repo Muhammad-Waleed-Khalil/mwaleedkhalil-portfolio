@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import Header1 from "../Header1";
 import Header6 from "../Header6";
 import Image from "next/image";
@@ -7,6 +7,7 @@ import StarSpin from "../StarSpin";
 import Paragraph from "../Paragraph";
 // Using Unsplash image for developer workspace
 // import HeroImage from "../../../public/images/general/home/hero_image.jpg";
+import AdobeExpressBg from "../../../public/Adobe Express - file.png";
 import MainButton from "../MainButton";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -14,6 +15,20 @@ import { useGSAP } from "@gsap/react";
 
 function Hero() {
   const star = useRef(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [isClient, setIsClient] = useState(false);
+
+  // Track mouse movement for eye following
+  useEffect(() => {
+    setIsClient(true);
+    
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
   useGSAP(() => {
     gsap.to(star.current, {
@@ -115,33 +130,62 @@ function Hero() {
 
   return (
     <section className="py-[8vh]">
-      <div className="flex flex-col items-center">
-        <div className="overflow-hidden">
-          <motion.div
-            variants={headerVariant1}
-            initial="initial"
-            animate="animate"
-            className=""
-          >
-            <Header1 text="Muhammad" />
-          </motion.div>
+      <div className="relative flex flex-col items-center text-center min-h-[60vh]">
+        {/* Background Image with Eye Tracking */}
+        <div className="absolute inset-0 flex items-center justify-center z-0">
+          <div className="relative w-[100vw] h-[70vh] md:w-[90vw] md:h-[80vh]">
+            <motion.div
+              className="relative w-full h-full"
+              animate={isClient ? {
+                rotateX: (mousePosition.y - window.innerHeight / 2) * 0.01,
+                rotateY: (mousePosition.x - window.innerWidth / 2) * 0.01,
+                scale: 1.1,
+              } : {}}
+              transition={{ type: "spring", stiffness: 150, damping: 15 }}
+            >
+              <Image
+                src={AdobeExpressBg}
+                alt="Background design with eye tracking"
+                fill
+                className="object-contain opacity-60 dark:opacity-40 transition-opacity duration-300"
+                priority
+                style={{
+                  filter: 'drop-shadow(0 0 20px rgba(0,0,0,0.3))',
+                }}
+              />
+            </motion.div>
+          </div>
         </div>
-        <div className="overflow-hidden">
-          <motion.div
-            variants={headerVariant2}
-            initial="initial"
-            animate="animate"
-            className=""
-          >
-            <Header1 text="Waleed Khalil" />
-          </motion.div>
+        
+        {/* Name Text */}
+        <div className="relative z-10 flex flex-col items-center text-center">
+          <div className="overflow-hidden w-full">
+            <motion.div
+              variants={headerVariant1}
+              initial="initial"
+              animate="animate"
+              className="text-center"
+            >
+              <Header1 text="Muhammad" />
+            </motion.div>
+          </div>
+          <div className="overflow-hidden w-full">
+            <motion.div
+              variants={headerVariant2}
+              initial="initial"
+              animate="animate"
+              className="text-center"
+            >
+              <Header1 text="Waleed Khalil" />
+            </motion.div>
+          </div>
         </div>
       </div>
       <motion.div
         variants={appear}
         initial="initial"
         animate="animate"
-        className="flex justify-center items-center md:justify-end gap-[5em] xs:gap-[8em] mt-5 md:pr-[6em]"
+        className="flex justify-center items-center gap-[3em] xs:gap-[4em] sm:gap-[5em] md:gap-[6em] mt-5"
       >
         <Header6 text="Full-Stack Developer" />
         <Header6 text="AI Integration Specialist" />

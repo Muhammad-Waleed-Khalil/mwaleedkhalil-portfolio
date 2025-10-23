@@ -6,6 +6,7 @@ import LenisScroll from "@/components/LenisScroll";
 import Scroll from "@/components/Scroll";
 import Script from "next/script";
 import { getPersonSchema, getOrganizationSchema } from "@/utils/structuredData";
+import ContentProtection from "@/components/ContentProtection";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://waleedkhalil.vercel.app";
@@ -97,12 +98,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/Adobe Express - file.png?v=1", sizes: "any" },
+      { url: "/Adobe Express - file.png?v=1", sizes: "16x16", type: "image/png" },
+      { url: "/Adobe Express - file.png?v=1", sizes: "32x32", type: "image/png" },
+      { url: "/Adobe Express - file.png?v=1", sizes: "48x48", type: "image/png" },
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/Adobe Express - file.png?v=1", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: [
+      { url: "/Adobe Express - file.png?v=1", sizes: "any" },
     ],
   },
   manifest: "/site.webmanifest",
@@ -147,6 +152,11 @@ export default function RootLayout({
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://images.unsplash.com" />
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        
+        {/* Favicon with cache busting */}
+        <link rel="icon" type="image/png" href="/Adobe Express - file.png?v=1" />
+        <link rel="shortcut icon" type="image/png" href="/Adobe Express - file.png?v=1" />
+        <link rel="apple-touch-icon" href="/Adobe Express - file.png?v=1" />
       </head>
       <body
         className={`${satoshiRegular.className} scrollbar scrollLight dark:scrollDark duration-300 bg-lightBg text-lightText dark:bg-darkBg dark:text-darkText`}
@@ -157,6 +167,8 @@ export default function RootLayout({
           <Scroll>
             {/* ENABLES DARK AND LIGHT MODE */}
             <Provider>
+              {/* CONTENT PROTECTION */}
+              <ContentProtection />
               <div>{children}</div>
             </Provider>
           </Scroll>
