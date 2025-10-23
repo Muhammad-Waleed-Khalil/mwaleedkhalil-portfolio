@@ -14,6 +14,7 @@ function Hero3DModel() {
     if (!containerRef.current) return;
 
     let mounted = true;
+    const container = containerRef.current;
 
     // Track mouse movement
     const handleMouseMove = (e: MouseEvent) => {
@@ -194,8 +195,8 @@ function Hero3DModel() {
         cancelAnimationFrame(animationFrameRef.current);
       }
 
-      if (rendererRef.current && containerRef.current) {
-        containerRef.current.removeChild(rendererRef.current.domElement);
+      if (rendererRef.current && container) {
+        container.removeChild(rendererRef.current.domElement);
         rendererRef.current.dispose();
       }
 
