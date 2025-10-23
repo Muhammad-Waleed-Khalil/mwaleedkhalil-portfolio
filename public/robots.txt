@@ -1,6 +1,14 @@
+# *
 User-agent: *
 Allow: /
+
+# *
+User-agent: *
 Disallow: /api/
 Disallow: /_next/
 
+# Host
+Host: https://mwaleedkhalil.vercel.app
+
+# Sitemaps
 Sitemap: https://mwaleedkhalil.vercel.app/sitemap.xml
