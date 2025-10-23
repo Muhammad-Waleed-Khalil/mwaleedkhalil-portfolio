@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nFix build error by adding three.js dependencies and resolving ESLint warning\n\n- Added three and @types/three packages to package.json to fix TypeScript compilation error\n- Fixed ESLint exhaustive-deps warning in Hero3DModel.tsx by capturing containerRef.current in a const variable\n- Verified build completes successfully\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push)",
+      "Bash(git commit:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
