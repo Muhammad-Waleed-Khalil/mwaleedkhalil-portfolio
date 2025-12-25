@@ -1,99 +1,106 @@
 [
   {
     "id": 1,
-    "title": "MOC-PULSE AI Interview System",
-    "description": "Real-time AI interview simulator analyzing tone, gestures, and emotion, improving candidate performance by 35%. Features advanced NLP and computer vision capabilities for comprehensive interview preparation.",
-    "longDescription": "MOC-PULSE is an innovative AI-powered interview preparation platform that leverages cutting-edge machine learning technologies to provide real-time feedback on candidate performance. The system analyzes vocal tone, facial expressions, body language, and speech patterns to offer actionable insights. Using TensorFlow.js for in-browser AI processing, the platform ensures privacy while delivering instantaneous feedback. The system has helped over 1,000 users improve their interview skills with a 35% increase in performance metrics.",
-    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&q=80",
+    "title": "VaultPay",
+    "description": "Secure and modern digital finance platform for seamless payments and expense management.",
+    "longDescription": "Secure and modern digital finance platform for seamless payments and expense management. Built with cutting-edge technology to ensure reliability and user trust.",
+    "image": "/images/elysian/introImage.jpg",
     "technologies": [
-      "Next.js",
-      "TensorFlow.js",
+      "React",
+      "TailwindCSS",
       "Node.js",
-      "WebRTC",
-      "TypeScript",
-      "OpenAI API",
-      "TailwindCSS"
+      "Express",
+      "MongoDB"
     ],
-    "category": "AI Integration",
+    "category": "FinTech / SaaS",
     "year": "2024",
-    "github": "https://github.com/Muhammad-Waleed-Khalil",
-    "featured": true
+    "featured": true,
+    "website": "https://payhawk.com"
   },
   {
     "id": 2,
-    "title": "Performance Management and Reforms Unit (PMRU) Dashboard",
-    "description": "Comprehensive workflow system for housing allocation and citizen queries. Achieved 90% faster processing with integrated AI chatbot for citizen support.",
-    "longDescription": "The Performance Management and Reforms Unit (PMRU) Government Dashboard is a sophisticated web application designed to streamline housing allocation processes and manage citizen queries efficiently. Built with Laravel and Vue.js, the system features an intuitive admin panel for managing applications, automated workflow routing, and real-time status tracking. The integrated AI chatbot handles common citizen queries, reducing manual workload by 60% and improving response times significantly. The dashboard has processed over 50,000 applications since deployment.",
-    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80",
+    "title": "MediFlow",
+    "description": "Healthcare & pharmaceutical supply chain management platform improving efficiency and transparency.",
+    "longDescription": "Healthcare & pharmaceutical supply chain management platform improving efficiency and transparency. Connects suppliers, distributors, and pharmacies through streamlined workflows and real-time tracking.",
+    "image": "/images/lofi_train/introImage.jpg",
     "technologies": [
-      "Laravel",
-      "Vue.js",
-      "MySQL",
-      "PHP",
-      "Redis",
-      "Chart.js",
-      "Bootstrap"
+      "React",
+      "Material-UI",
+      "Node.js",
+      "Express",
+      "PostgreSQL"
     ],
-    "category": "Government Platform",
-    "year": "2023",
-    "featured": true
+    "category": "Healthcare / Enterprise",
+    "year": "2024",
+    "featured": true,
+    "website": "https://www.medius.com"
   },
   {
     "id": 3,
-    "title": "IntelliDelve SaaS Platform",
-    "description": "Multi-tenant SaaS platform serving 5K+ users. Integrated AI modules boosted user engagement by 30% through intelligent recommendations and automation.",
-    "longDescription": "IntelliDelve is a comprehensive SaaS solution designed for business intelligence and data analytics. The platform serves over 5,000 active users across multiple organizations, providing real-time data visualization, predictive analytics, and automated reporting. Built on React and Node.js with Firebase for real-time data synchronization, the platform integrates multiple AI modules including natural language processing for query generation and machine learning for predictive insights. The scalable architecture supports thousands of concurrent users with sub-second response times.",
-    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80",
+    "title": "NeuroDesk",
+    "description": "AI-powered productivity SaaS platform with interactive dashboards and intelligent features.",
+    "longDescription": "AI-powered productivity SaaS platform with interactive dashboards and intelligent features. Automates tasks and enhances productivity through scalable and user-friendly interfaces.",
+    "image": "/images/oracle/introImage.png",
     "technologies": [
+      "Next.js",
       "React",
-      "Node.js",
-      "Firebase",
       "TypeScript",
-      "Material-UI",
-      "D3.js",
-      "Express"
+      "Firebase"
     ],
-    "category": "SaaS Platform",
-    "year": "2023",
-    "website": "https://intellidelve.com",
-    "featured": true
+    "category": "AI / SaaS",
+    "year": "2024",
+    "featured": true,
+    "website": "https://activetheory.net"
   },
   {
     "id": 4,
-    "title": "E-Commerce Multi-Vendor Suite",
-    "description": "Full-featured MERN stack e-commerce platform with Firebase integration. Improved page load times by 40% and supports multiple vendors with advanced inventory management.",
-    "longDescription": "A comprehensive e-commerce solution built with the MERN stack, featuring multi-vendor capabilities, real-time inventory management, and seamless payment integration with Stripe. The platform includes vendor dashboards, customer reviews, advanced search with filters, and real-time order tracking. Optimized with lazy loading, image compression, and CDN integration to achieve 40% faster load times. The platform handles thousands of products across multiple categories with a smooth, responsive user experience.",
-    "image": "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80",
+    "title": "CoreAxis",
+    "description": "Corporate & technology company website emphasizing modern design and storytelling.",
+    "longDescription": "Corporate & technology company website emphasizing modern design and storytelling. Showcases services, case studies, and expertise with strong branding and performance.",
+    "image": "/images/sylvan/introImage.jpg",
     "technologies": [
-      "MongoDB",
-      "Express",
       "React",
-      "Node.js",
-      "Firebase",
-      "Stripe",
-      "Redux",
+      "Framer Motion",
       "TailwindCSS"
     ],
-    "category": "E-Commerce",
-    "year": "2022",
-    "featured": true
+    "category": "Business / Corporate",
+    "year": "2024",
+    "featured": true,
+    "website": "https://locomotive.ca"
   },
   {
     "id": 5,
-    "title": "React Native Mobile Apps",
-    "description": "Cross-platform mobile applications with native performance. Built scalable solutions for iOS and Android with offline-first architecture.",
-    "longDescription": "Developed multiple cross-platform mobile applications using React Native, focusing on performance optimization and user experience. Applications feature offline-first architecture, real-time synchronization, push notifications, and native module integration. Utilized Redux for state management and implemented custom animations for smooth UI transitions. Successfully deployed apps to both iOS App Store and Google Play Store with 4.5+ star ratings.",
-    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80",
+    "title": "BuildNest",
+    "description": "Construction & hospitality business platform with clean design and professional layouts.",
+    "longDescription": "Construction & hospitality business platform with clean design and professional layouts. Showcases projects with lead-focused user experience and optimized navigation.",
+    "image": "/images/services/bottom1.png",
     "technologies": [
-      "React Native",
-      "TypeScript",
-      "Redux",
-      "Firebase",
-      "Native Modules",
-      "Expo"
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "TailwindCSS"
     ],
-    "category": "Mobile Development",
-    "year": "2023",
-    "featured": false
+    "category": "Real Estate / Business",
+    "year": "2024",
+    "featured": true,
+    "website": "https://normarchitects.com"
+  },
+  {
+    "id": 6,
+    "title": "FormaStudio",
+    "description": "Creative product & design showcase highlighting projects and portfolios elegantly.",
+    "longDescription": "Creative product & design showcase highlighting projects and portfolios elegantly. Emphasizes storytelling, motion design, and immersive user experience.",
+    "image": "/images/general/home/hero_image.jpg",
+    "technologies": [
+      "React",
+      "Gatsby",
+      "Styled-Components",
+      "GraphQL"
+    ],
+    "category": "UI / UX / Frontend",
+    "year": "2024",
+    "featured": true,
+    "website": "https://www.studiobright.com"
   }
 ]

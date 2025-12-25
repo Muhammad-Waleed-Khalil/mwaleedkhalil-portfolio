@@ -27,7 +27,7 @@ function IndividualWorkNew({ work }: Work) {
         work?.id === 1 ? "md:justify-start" : work?.id % 2 === 0 ? "md:justify-end" : "md:justify-start"
       } mb-[15vw]`}
     >
-      <div className="w-full sm:max-w-[60vw] md:max-w-[35vw]">
+      <div className="w-full sm:max-w-[60vw] md:max-w-[35vw] border border-gray-300 dark:border-gray-700 rounded-lg p-4 bg-white dark:bg-gray-900 shadow-lg">
         <a
           href={work?.website || work?.github || "#"}
           target={work?.website || work?.github ? "_blank" : "_self"}
@@ -53,11 +53,11 @@ function IndividualWorkNew({ work }: Work) {
         </a>
         <div className="flex flex-row-reverse justify-between items-start mt-3">
           <p className="text-sm opacity-70">{work?.year}</p>
-          <h5 className={`${spectralBridgeRegular.className} text-[28px] md:text-[32px] leading-tight`}>
+          <h5 className={`${spectralBridgeRegular.className} text-[36px] md:text-[40px] leading-tight font-bold`}>
             {work?.title}
           </h5>
         </div>
-        <p className="text-sm md:text-base opacity-80 mt-2 leading-relaxed">
+        <p className="text-sm md:text-base opacity-80 mt-2 leading-relaxed bg-gray-100 dark:bg-gray-800 p-3 rounded-md">
           {work?.description}
         </p>
         <div className="flex gap-x-2 gap-y-2 items-center flex-wrap mt-3">
