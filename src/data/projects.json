@@ -102,5 +102,72 @@
     "year": "2024",
     "featured": true,
     "website": "https://www.studiobright.com"
+  },
+  {
+    "id": 7,
+    "title": "PMRU GIS Dashboard",
+    "description": "Interactive GIS dashboard for government performance and spatial data visualization.",
+    "longDescription": "Interactive GIS dashboard for government performance and spatial data visualization. Provides comprehensive mapping and analytics for spatial data management.",
+    "image": "/images/general/home/about_image.jpg",
+    "technologies": [
+      "React",
+      "GIS libraries (Leaflet/Mapbox)",
+      "Node.js",
+      "PostgreSQL"
+    ],
+    "category": "Government",
+    "year": "2024",
+    "featured": true,
+    "website": "https://pmrugis.kpdata.gov.pk/"
+  },
+  {
+    "id": 8,
+    "title": "Integrated Performance Management System (IPMS)",
+    "description": "Centralized dashboard tracking government KPIs, compliance, and analytics.",
+    "longDescription": "Centralized dashboard tracking government KPIs, compliance, and analytics. Monitors performance metrics and ensures regulatory compliance through interactive interfaces.",
+    "image": "/images/ipms.png",
+    "technologies": [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Chart.js"
+    ],
+    "category": "Government",
+    "year": "2024",
+    "featured": true,
+    "website": "https://ipms.kpdata.gov.pk/"
+  },
+  {
+    "id": 9,
+    "title": "Hotel Mehran Peshawar Website",
+    "description": "Responsive hotel website showing rooms, amenities, and booking info.",
+    "longDescription": "Responsive hotel website showing rooms, amenities, and booking info. Provides an engaging platform for guests to explore and book accommodations.",
+    "image": "/images/general/home/test.jpg",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "category": "Business",
+    "year": "2024",
+    "featured": true,
+    "website": "https://hotelmehranpeshawar.com/"
+  },
+  {
+    "id": 10,
+    "title": "IntelliDelve Corporate Website",
+    "description": "Corporate technology services website highlighting solutions and company profile.",
+    "longDescription": "Corporate technology services website highlighting solutions and company profile. Showcases expertise in technology services with modern design and comprehensive information.",
+    "image": "/images/general/home/about_image2.png",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "category": "Corporate",
+    "year": "2024",
+    "featured": true,
+    "website": "https://intellidelve.com/"
   }
 ]

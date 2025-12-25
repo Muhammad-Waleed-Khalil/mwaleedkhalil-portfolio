@@ -75,14 +75,12 @@ function IndividualWorkNew({ work }: Work) {
         {(work?.website || work?.github) && (
           <div className="flex gap-3 mt-4">
             {work?.website && (
-              <a
-                href={work.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm underline hover:opacity-70 transition-opacity"
+              <button
+                onClick={() => window.open(work.website, '_blank')}
+                className="text-base font-semibold underline hover:opacity-70 transition-opacity cursor-pointer"
               >
                 View Live →
-              </a>
+              </button>
             )}
             {work?.github && (
               <a
