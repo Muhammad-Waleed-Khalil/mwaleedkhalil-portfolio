@@ -9,7 +9,7 @@ import { getPersonSchema, getOrganizationSchema } from "@/utils/structuredData";
 import ContentProtection from "@/components/ContentProtection";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://waleedkhalil.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://mwaleedkhalil.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -96,6 +96,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "google-site-verification": "d9f163e4ef1c27f0",
+  },
   icons: {
     icon: [
       { url: "/Adobe Express - file.png?v=1", sizes: "any" },
@@ -115,8 +118,7 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   verification: {
-    google: "google-site-verification-code-here",
-    // Add your Google Search Console verification code after setting up
+    google: "d9f163e4ef1c27f0",
   },
   category: "technology",
 };

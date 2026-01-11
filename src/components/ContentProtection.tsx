@@ -286,11 +286,7 @@ const ContentProtection = () => {
       return false;
     });
 
-    // Disable save as
-    window.addEventListener('beforeunload', (e) => {
-      e.preventDefault();
-      e.returnValue = '';
-    });
+    // Note: beforeunload removed to improve user experience
 
     // Cleanup function
     return () => {

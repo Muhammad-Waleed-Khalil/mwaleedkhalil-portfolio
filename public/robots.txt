@@ -8,7 +8,7 @@ Disallow: /api/
 Disallow: /_next/
 
 # Host
-Host: https://mwaleedkhalil.vercel.app
+Host: https://mwaleedkhalil.com
 
 # Sitemaps
-Sitemap: https://mwaleedkhalil.vercel.app/sitemap.xml
+Sitemap: https://mwaleedkhalil.com/sitemap.xml

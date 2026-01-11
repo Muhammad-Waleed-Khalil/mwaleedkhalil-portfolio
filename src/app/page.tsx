@@ -11,7 +11,7 @@ import { getWebPageSchema, getPortfolioSchema } from "@/utils/structuredData";
 import { featuredProjects } from "@/utils/projectsData";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://waleedkhalil.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://mwaleedkhalil.com";
 
 export const metadata: Metadata = {
   ...generateMetadata("home"),

@@ -23,6 +23,7 @@
     "react": "^18",
     "react-dom": "^18",
     "scrolltrigger": "^1.0.1",
+    "sharp": "^0.34.5",
     "three": "^0.180.0"
   },
   "devDependencies": {

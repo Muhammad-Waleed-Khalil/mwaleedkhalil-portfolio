@@ -239,6 +239,75 @@ export const getSkillsSchema = () => ({
   ],
 });
 
+// FAQ Schema for common questions
+export const getFAQSchema = (faqs: Array<{ question: string; answer: string }>) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.answer,
+    },
+  })),
+});
+
+// Service Schema
+export const getServiceSchema = (siteUrl: string) => ({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Full-Stack Web Development",
+  provider: {
+    "@type": "Person",
+    name: "Muhammad Waleed Khalil",
+    url: siteUrl,
+  },
+  areaServed: "Worldwide",
+  availableChannel: {
+    "@type": "ServiceChannel",
+    serviceUrl: `${siteUrl}/contact`,
+  },
+  offers: [
+    {
+      "@type": "Offer",
+      name: "Web Development",
+      description: "Custom web application development using Next.js, React, Laravel",
+    },
+    {
+      "@type": "Offer",
+      name: "Mobile App Development",
+      description: "Native and cross-platform mobile apps with React Native",
+    },
+    {
+      "@type": "Offer",
+      name: "AI Integration",
+      description: "AI and machine learning integration for web and mobile applications",
+    },
+    {
+      "@type": "Offer",
+      name: "DevOps Services",
+      description: "CI/CD, Docker, cloud deployment, and infrastructure management",
+    },
+  ],
+});
+
+// Review/Rating Schema (if you have testimonials)
+export const getAggregateRatingSchema = (
+  ratings: { rating: number; count: number }
+) => ({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Muhammad Waleed Khalil",
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: ratings.rating.toString(),
+    reviewCount: ratings.count.toString(),
+    bestRating: "5",
+    worstRating: "1",
+  },
+});
+
 // Helper function to generate JSON-LD script tag
 export const generateJsonLd = (schema: any): string => {
   return JSON.stringify(schema);

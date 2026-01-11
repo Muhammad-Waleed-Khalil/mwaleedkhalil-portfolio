@@ -13,7 +13,7 @@ export interface SEOConfig {
 }
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://waleedkhalil.vercel.app";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://mwaleedkhalil.com";
 const SITE_NAME = "Muhammad Waleed Khalil";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/images/og-image.jpg`;
 
